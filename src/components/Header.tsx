@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Menu, X, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,7 +21,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <div className="bg-gradient-to-r from-nayibulls-navy to-nayibulls-green p-2 rounded-lg">
               <TrendingUp className="h-6 w-6 text-white" />
             </div>
@@ -28,18 +29,18 @@ const Header = () => {
               <h1 className="text-xl font-bold text-nayibulls-navy">NayiBulls</h1>
               <p className="text-xs text-gray-600">New-Age Investor Tools</p>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className="text-gray-700 hover:text-nayibulls-navy font-medium transition-colors duration-200"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -60,14 +61,14 @@ const Header = () => {
           <div className="md:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col space-y-2">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className="text-gray-700 hover:text-nayibulls-navy font-medium py-2 transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
             </nav>
           </div>

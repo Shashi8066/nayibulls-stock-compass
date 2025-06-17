@@ -2,6 +2,7 @@
 import { ArrowRight, TrendingUp, Calculator, BarChart3, BookOpen, Shield, Zap, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -73,11 +74,15 @@ const Index = () => {
               educational tools designed for retail investors in India.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-nayibulls-navy hover:bg-nayibulls-navy-dark">
-                Explore Tools <ArrowRight className="ml-2 h-4 w-4" />
+              <Button size="lg" className="bg-nayibulls-navy hover:bg-nayibulls-navy-dark" asChild>
+                <Link to="/stock-finder">
+                  Explore Tools <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-nayibulls-navy text-nayibulls-navy hover:bg-nayibulls-navy hover:text-white">
-                Learn More
+              <Button size="lg" variant="outline" className="border-nayibulls-navy text-nayibulls-navy hover:bg-nayibulls-navy hover:text-white" asChild>
+                <Link to="/about">
+                  Learn More
+                </Link>
               </Button>
             </div>
           </div>
@@ -111,9 +116,9 @@ const Index = () => {
                     className="text-nayibulls-navy hover:text-nayibulls-green group-hover:translate-x-2 transition-all duration-300"
                     asChild
                   >
-                    <a href={tool.href}>
+                    <Link to={tool.href}>
                       Try Tool <ArrowRight className="ml-2 h-4 w-4" />
-                    </a>
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -151,8 +156,10 @@ const Index = () => {
           <p className="text-xl mb-8 text-blue-200">
             No registration required. Access all tools instantly and start learning about the stock market.
           </p>
-          <Button size="lg" className="bg-nayibulls-green hover:bg-nayibulls-green-dark text-white">
-            Get Started <ArrowRight className="ml-2 h-4 w-4" />
+          <Button size="lg" className="bg-nayibulls-green hover:bg-nayibulls-green-dark text-white" asChild>
+            <Link to="/stock-finder">
+              Get Started <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
           </Button>
           <p className="text-sm text-blue-200 mt-4">
             <Shield className="inline h-4 w-4 mr-1" />

@@ -1,5 +1,6 @@
 
 import { TrendingUp, Mail, Shield, FileText, HelpCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,7 +11,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center space-x-2">
               <div className="bg-nayibulls-green p-2 rounded-lg">
                 <TrendingUp className="h-6 w-6 text-white" />
               </div>
@@ -18,7 +19,7 @@ const Footer = () => {
                 <h3 className="text-xl font-bold">NayiBulls</h3>
                 <p className="text-sm text-blue-200">New-Age Investor Tools</p>
               </div>
-            </div>
+            </Link>
             <p className="text-blue-200 text-sm">
               Educational stock market tools for retail investors in India. Not financial advice.
             </p>
@@ -28,10 +29,20 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Tools</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="/stock-finder" className="text-blue-200 hover:text-white transition-colors">Emerging Stock Finder</a></li>
-              <li><a href="/return-calculator" className="text-blue-200 hover:text-white transition-colors">Return Estimator</a></li>
-              <li><a href="/stock-comparison" className="text-blue-200 hover:text-white transition-colors">Stock Comparison</a></li>
-              <li><a href="/glossary" className="text-blue-200 hover:text-white transition-colors">Financial Glossary</a></li>
+              <li><Link to="/stock-finder" className="text-blue-200 hover:text-white transition-colors">Emerging Stock Finder</Link></li>
+              <li><Link to="/return-calculator" className="text-blue-200 hover:text-white transition-colors">Return Estimator</Link></li>
+              <li><Link to="/stock-comparison" className="text-blue-200 hover:text-white transition-colors">Stock Comparison</Link></li>
+              <li><Link to="/glossary" className="text-blue-200 hover:text-white transition-colors">Financial Glossary</Link></li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h4 className="font-semibold mb-4">Company</h4>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/about" className="text-blue-200 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/contact" className="text-blue-200 hover:text-white transition-colors">Contact</Link></li>
+              <li><Link to="/faq" className="text-blue-200 hover:text-white transition-colors flex items-center"><HelpCircle className="h-4 w-4 mr-1" />FAQ</Link></li>
             </ul>
           </div>
 
@@ -39,25 +50,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Legal</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="/disclaimer" className="text-blue-200 hover:text-white transition-colors flex items-center"><Shield className="h-4 w-4 mr-1" />Disclaimer</a></li>
-              <li><a href="/privacy" className="text-blue-200 hover:text-white transition-colors flex items-center"><FileText className="h-4 w-4 mr-1" />Privacy Policy</a></li>
-              <li><a href="/terms" className="text-blue-200 hover:text-white transition-colors flex items-center"><FileText className="h-4 w-4 mr-1" />Terms of Service</a></li>
-              <li><a href="/faq" className="text-blue-200 hover:text-white transition-colors flex items-center"><HelpCircle className="h-4 w-4 mr-1" />FAQ</a></li>
+              <li><Link to="/disclaimer" className="text-blue-200 hover:text-white transition-colors flex items-center"><Shield className="h-4 w-4 mr-1" />Disclaimer</Link></li>
+              <li><Link to="/privacy" className="text-blue-200 hover:text-white transition-colors flex items-center"><FileText className="h-4 w-4 mr-1" />Privacy Policy</Link></li>
+              <li><Link to="/terms" className="text-blue-200 hover:text-white transition-colors flex items-center"><FileText className="h-4 w-4 mr-1" />Terms of Service</Link></li>
             </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="font-semibold mb-4">Contact</h4>
-            <div className="space-y-2 text-sm">
-              <a href="mailto:contact@nayibulls.com" className="text-blue-200 hover:text-white transition-colors flex items-center">
-                <Mail className="h-4 w-4 mr-2" />
-                contact@nayibulls.com
-              </a>
-              <p className="text-blue-200 text-xs mt-4">
-                <strong>Disclaimer:</strong> Not SEBI registered. For educational purposes only.
-              </p>
-            </div>
           </div>
         </div>
 
