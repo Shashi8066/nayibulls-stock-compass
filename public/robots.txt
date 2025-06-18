@@ -1,14 +1,24 @@
 User-agent: Googlebot
+Disallow: /music/
+Disallow: /category/
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
 User-agent: Twitterbot
+Disallow: /music/
+Disallow: /category/
 Allow: /
 
 User-agent: facebookexternalhit
 Allow: /
 
 User-agent: *
+Disallow: /music/
+Disallow: /category/
 Allow: /
+
+
+# Sitemaps
+Sitemap: https://nayibulls.com/sitemap.xml
