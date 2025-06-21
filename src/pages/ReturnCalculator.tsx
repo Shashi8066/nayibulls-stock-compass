@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Slider } from '@/components/ui/slider';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar } from 'recharts';
+import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -81,6 +82,27 @@ const ReturnCalculator = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-nayibulls-gray">
+      <Helmet>
+        <title>SIP Return Calculator - Investment Growth Estimator | NayiBulls</title>
+        <meta name="description" content="Calculate potential returns from your investments with our SIP-style return estimator. Visualize compound growth over time and make informed investment decisions." />
+        <meta name="keywords" content="SIP calculator, return calculator, investment calculator, compound interest calculator, SIP returns, investment growth, financial calculator" />
+        <meta name="author" content="NayiBulls" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://nayibulls.com/return-calculator" />
+        
+        {/* Open Graph meta tags */}
+        <meta property="og:title" content="SIP Return Calculator - Investment Growth Estimator" />
+        <meta property="og:description" content="Calculate potential returns from your investments with our SIP-style return estimator. Visualize compound growth over time." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nayibulls.com/return-calculator" />
+        <meta property="og:site_name" content="NayiBulls" />
+        
+        {/* Twitter meta tags */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="SIP Return Calculator - Investment Growth Estimator" />
+        <meta name="twitter:description" content="Calculate potential returns from your investments with our SIP-style return estimator." />
+      </Helmet>
+
       <Header />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

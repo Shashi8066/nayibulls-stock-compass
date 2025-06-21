@@ -1,11 +1,33 @@
 
 import { Shield } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 const Privacy = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-nayibulls-gray">
+      <Helmet>
+        <title>Privacy Policy - NayiBulls Data Protection & Privacy</title>
+        <meta name="description" content="NayiBulls Privacy Policy. Learn how we protect your privacy with minimal data collection, no personal financial information storage, and anonymous analytics." />
+        <meta name="keywords" content="privacy policy, data protection, user privacy, anonymous analytics, no personal data, privacy rights" />
+        <meta name="author" content="NayiBulls" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://nayibulls.com/privacy" />
+        
+        {/* Open Graph meta tags */}
+        <meta property="og:title" content="Privacy Policy - NayiBulls Data Protection & Privacy" />
+        <meta property="og:description" content="NayiBulls Privacy Policy. Learn how we protect your privacy with minimal data collection and anonymous analytics." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nayibulls.com/privacy" />
+        <meta property="og:site_name" content="NayiBulls" />
+        
+        {/* Twitter meta tags */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Privacy Policy - NayiBulls Data Protection & Privacy" />
+        <meta name="twitter:description" content="Learn how NayiBulls protects your privacy with minimal data collection." />
+      </Helmet>
+
       <Header />
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

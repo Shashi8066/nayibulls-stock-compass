@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { BarChart3, TrendingUp, TrendingDown } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -65,6 +66,27 @@ const StockComparison = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-nayibulls-gray">
+      <Helmet>
+        <title>Stock Comparison Tool - Compare Indian Company Financials | NayiBulls</title>
+        <meta name="description" content="Compare financial metrics of Indian companies side-by-side. Analyze PE ratios, ROCE, dividend yields, and key financial ratios to make informed investment decisions." />
+        <meta name="keywords" content="stock comparison, company comparison, financial ratios, PE ratio, ROCE, dividend yield, indian companies, financial analysis" />
+        <meta name="author" content="NayiBulls" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://nayibulls.com/stock-comparison" />
+        
+        {/* Open Graph meta tags */}
+        <meta property="og:title" content="Stock Comparison Tool - Compare Indian Company Financials" />
+        <meta property="og:description" content="Compare financial metrics of Indian companies side-by-side. Analyze PE ratios, ROCE, dividend yields, and key financial ratios." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nayibulls.com/stock-comparison" />
+        <meta property="og:site_name" content="NayiBulls" />
+        
+        {/* Twitter meta tags */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Stock Comparison Tool - Compare Indian Company Financials" />
+        <meta name="twitter:description" content="Compare financial metrics of Indian companies side-by-side." />
+      </Helmet>
+
       <Header />
       
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

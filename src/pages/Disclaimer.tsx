@@ -1,12 +1,34 @@
 
 import { Shield, AlertTriangle, Info, FileText } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 const Disclaimer = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-nayibulls-gray">
+      <Helmet>
+        <title>Important Disclaimer - NayiBulls Investment Tool Disclaimer</title>
+        <meta name="description" content="Important disclaimer: NayiBulls is not SEBI registered. Educational tools only, not financial advice. Investment risks and user responsibilities explained." />
+        <meta name="keywords" content="investment disclaimer, not financial advice, sebi registration, educational tools, investment risks, user responsibilities" />
+        <meta name="author" content="NayiBulls" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://nayibulls.com/disclaimer" />
+        
+        {/* Open Graph meta tags */}
+        <meta property="og:title" content="Important Disclaimer - NayiBulls Investment Tool Disclaimer" />
+        <meta property="og:description" content="Important disclaimer: NayiBulls is not SEBI registered. Educational tools only, not financial advice." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nayibulls.com/disclaimer" />
+        <meta property="og:site_name" content="NayiBulls" />
+        
+        {/* Twitter meta tags */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Important Disclaimer - NayiBulls Investment Tool Disclaimer" />
+        <meta name="twitter:description" content="Important disclaimer: Educational tools only, not financial advice." />
+      </Helmet>
+
       <Header />
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

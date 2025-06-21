@@ -1,11 +1,33 @@
 
 import { FileText } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 const Terms = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-nayibulls-gray">
+      <Helmet>
+        <title>Terms of Service - NayiBulls Legal Terms & Conditions</title>
+        <meta name="description" content="NayiBulls Terms of Service. Educational platform disclaimer, no investment advice, SEBI compliance, and user responsibilities for stock market tools." />
+        <meta name="keywords" content="terms of service, legal terms, investment disclaimer, educational tools, sebi compliance, user agreement" />
+        <meta name="author" content="NayiBulls" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://nayibulls.com/terms" />
+        
+        {/* Open Graph meta tags */}
+        <meta property="og:title" content="Terms of Service - NayiBulls Legal Terms & Conditions" />
+        <meta property="og:description" content="NayiBulls Terms of Service. Educational platform disclaimer and user responsibilities." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nayibulls.com/terms" />
+        <meta property="og:site_name" content="NayiBulls" />
+        
+        {/* Twitter meta tags */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Terms of Service - NayiBulls Legal Terms & Conditions" />
+        <meta name="twitter:description" content="NayiBulls Terms of Service and user responsibilities." />
+      </Helmet>
+
       <Header />
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

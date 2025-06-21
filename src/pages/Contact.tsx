@@ -1,5 +1,6 @@
 
 import { Mail, MessageSquare, Clock, MapPin } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -8,6 +9,27 @@ import { Button } from '@/components/ui/button';
 const Contact = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-nayibulls-gray">
+      <Helmet>
+        <title>Contact Us - Get in Touch with NayiBulls Team</title>
+        <meta name="description" content="Have questions about our investment tools? Contact NayiBulls team for support, feedback, or suggestions. We respond within 24-48 hours." />
+        <meta name="keywords" content="contact nayibulls, customer support, investment tools help, feedback, contact us, support" />
+        <meta name="author" content="NayiBulls" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://nayibulls.com/contact" />
+        
+        {/* Open Graph meta tags */}
+        <meta property="og:title" content="Contact Us - Get in Touch with NayiBulls Team" />
+        <meta property="og:description" content="Have questions about our investment tools? Contact NayiBulls team for support, feedback, or suggestions." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nayibulls.com/contact" />
+        <meta property="og:site_name" content="NayiBulls" />
+        
+        {/* Twitter meta tags */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Contact Us - Get in Touch with NayiBulls Team" />
+        <meta name="twitter:description" content="Have questions about our investment tools? Contact NayiBulls team for support." />
+      </Helmet>
+
       <Header />
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

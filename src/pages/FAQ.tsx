@@ -1,6 +1,7 @@
 
 import { HelpCircle, ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -61,6 +62,27 @@ const FAQ = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-nayibulls-gray">
+      <Helmet>
+        <title>FAQ - Frequently Asked Questions | NayiBulls</title>
+        <meta name="description" content="Find answers to common questions about NayiBulls investment tools. Learn about data sources, accuracy, SEBI registration, and educational purpose." />
+        <meta name="keywords" content="nayibulls faq, investment tools questions, stock market tools help, sebi registration, investment advice disclaimer" />
+        <meta name="author" content="NayiBulls" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://nayibulls.com/faq" />
+        
+        {/* Open Graph meta tags */}
+        <meta property="og:title" content="FAQ - Frequently Asked Questions | NayiBulls" />
+        <meta property="og:description" content="Find answers to common questions about NayiBulls investment tools and educational resources." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nayibulls.com/faq" />
+        <meta property="og:site_name" content="NayiBulls" />
+        
+        {/* Twitter meta tags */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="FAQ - Frequently Asked Questions | NayiBulls" />
+        <meta name="twitter:description" content="Find answers to common questions about NayiBulls investment tools." />
+      </Helmet>
+
       <Header />
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

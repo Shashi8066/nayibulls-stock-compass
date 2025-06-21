@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { BookOpen, Search } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -96,6 +97,27 @@ const Glossary = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-nayibulls-gray">
+      <Helmet>
+        <title>Financial Glossary - Stock Market Terms Explained | NayiBulls</title>
+        <meta name="description" content="Learn essential stock market terms with simple explanations. Understand PE ratio, ROCE, CAGR, dividend yield, and 30+ financial terms for retail investors." />
+        <meta name="keywords" content="financial glossary, stock market terms, PE ratio, ROCE, CAGR, dividend yield, financial education, investment terms, stock market basics" />
+        <meta name="author" content="NayiBulls" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://nayibulls.com/glossary" />
+        
+        {/* Open Graph meta tags */}
+        <meta property="og:title" content="Financial Glossary - Stock Market Terms Explained" />
+        <meta property="og:description" content="Learn essential stock market terms with simple explanations. Understand PE ratio, ROCE, CAGR, and 30+ financial terms." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nayibulls.com/glossary" />
+        <meta property="og:site_name" content="NayiBulls" />
+        
+        {/* Twitter meta tags */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Financial Glossary - Stock Market Terms Explained" />
+        <meta name="twitter:description" content="Learn essential stock market terms with simple explanations for retail investors." />
+      </Helmet>
+
       <Header />
       
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

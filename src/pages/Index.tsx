@@ -3,6 +3,7 @@ import { ArrowRight, TrendingUp, Calculator, BarChart3, BookOpen, Shield, Zap, U
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -58,6 +59,29 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-nayibulls-gray">
+      <Helmet>
+        <title>NayiBulls - Tools for the New-Age Investor | Stock Analysis & Return Calculator</title>
+        <meta name="description" content="Estimate returns, explore rising stocks, and compare companies with NayiBulls — educational tools designed for retail investors in India. Free stock analysis tools." />
+        <meta name="keywords" content="stock analysis, return calculator, SIP calculator, stock comparison, indian stocks, investment tools, stock finder, financial calculator" />
+        <meta name="author" content="NayiBulls" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://nayibulls.com/" />
+        
+        {/* Open Graph meta tags */}
+        <meta property="og:title" content="NayiBulls - Tools for the New-Age Investor" />
+        <meta property="og:description" content="Estimate returns, explore rising stocks, and compare companies with NayiBulls — educational tools designed for retail investors in India." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nayibulls.com/" />
+        <meta property="og:site_name" content="NayiBulls" />
+        <meta property="og:locale" content="en_IN" />
+        
+        {/* Twitter meta tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="NayiBulls - Tools for the New-Age Investor" />
+        <meta name="twitter:description" content="Estimate returns, explore rising stocks, and compare companies with NayiBulls — educational tools designed for retail investors in India." />
+        <meta name="twitter:site" content="@nayibulls" />
+      </Helmet>
+
       <Header />
       
       {/* Hero Section */}

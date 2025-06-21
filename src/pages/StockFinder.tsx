@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
+import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -156,6 +157,27 @@ const StockFinder = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-nayibulls-gray">
+      <Helmet>
+        <title>Stock Finder - Discover Emerging Indian Stocks | NayiBulls</title>
+        <meta name="description" content="Discover fast-growing small-cap and mid-cap Indian stocks with advanced filters. Find emerging opportunities based on market cap, sector, and growth metrics." />
+        <meta name="keywords" content="stock finder, indian stocks, small cap stocks, mid cap stocks, emerging stocks, stock discovery, stock screening, investment opportunities" />
+        <meta name="author" content="NayiBulls" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://nayibulls.com/stock-finder" />
+        
+        {/* Open Graph meta tags */}
+        <meta property="og:title" content="Stock Finder - Discover Emerging Indian Stocks" />
+        <meta property="og:description" content="Discover fast-growing small-cap and mid-cap Indian stocks with advanced filters. Find emerging opportunities based on market cap, sector, and growth metrics." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nayibulls.com/stock-finder" />
+        <meta property="og:site_name" content="NayiBulls" />
+        
+        {/* Twitter meta tags */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Stock Finder - Discover Emerging Indian Stocks" />
+        <meta name="twitter:description" content="Discover fast-growing small-cap and mid-cap Indian stocks with advanced filters." />
+      </Helmet>
+
       <Header />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

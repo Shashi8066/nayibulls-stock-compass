@@ -1,5 +1,6 @@
 
 import { TrendingUp, Users, Target, Shield } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -7,6 +8,27 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 const About = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-nayibulls-gray">
+      <Helmet>
+        <title>About NayiBulls - Educational Tools for New-Age Investors</title>
+        <meta name="description" content="Learn about NayiBulls mission to democratize stock market education for retail investors in India. Educational tools, not financial advice." />
+        <meta name="keywords" content="about nayibulls, stock market education, retail investors india, investment tools, financial education, investment analysis" />
+        <meta name="author" content="NayiBulls" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://nayibulls.com/about" />
+        
+        {/* Open Graph meta tags */}
+        <meta property="og:title" content="About NayiBulls - Educational Tools for New-Age Investors" />
+        <meta property="og:description" content="Learn about NayiBulls mission to democratize stock market education for retail investors in India." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nayibulls.com/about" />
+        <meta property="og:site_name" content="NayiBulls" />
+        
+        {/* Twitter meta tags */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="About NayiBulls - Educational Tools for New-Age Investors" />
+        <meta name="twitter:description" content="Learn about NayiBulls mission to democratize stock market education for retail investors in India." />
+      </Helmet>
+
       <Header />
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
