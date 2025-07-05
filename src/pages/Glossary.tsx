@@ -1,14 +1,15 @@
-
+import { BookOpen, Search, TrendingUp, DollarSign, BarChart, PieChart, Info, Target, Lightbulb } from 'lucide-react';
 import { useState } from 'react';
-import { BookOpen, Search } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Badge } from '@/components/ui/badge';
 import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
 
 const Glossary = () => {
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
   const glossaryTerms = [
     {
@@ -99,28 +100,26 @@ const Glossary = () => {
     <div className="min-h-screen bg-gradient-to-br from-white to-nayibulls-gray">
       <Helmet>
         <title>Financial Glossary - Stock Market Terms Explained | NayiBulls</title>
-        <meta name="description" content="Learn essential stock market terms with simple explanations. Understand PE ratio, ROCE, CAGR, dividend yield, and 30+ financial terms for retail investors." />
-        <meta name="keywords" content="financial glossary, stock market terms, PE ratio, ROCE, CAGR, dividend yield, financial education, investment terms, stock market basics" />
+        <meta name="description" content="Learn essential stock market terms with simple explanations. Master PE ratio, ROCE, dividend yield, market cap and 30+ financial concepts for Indian investors." />
+        <meta name="keywords" content="financial glossary, stock market terms, PE ratio, ROCE, dividend yield, market cap, investment terms, Indian stock market" />
         <meta name="author" content="NayiBulls" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://nayibulls.com/glossary" />
         
-        {/* Open Graph meta tags */}
         <meta property="og:title" content="Financial Glossary - Stock Market Terms Explained" />
-        <meta property="og:description" content="Learn essential stock market terms with simple explanations. Understand PE ratio, ROCE, CAGR, and 30+ financial terms." />
+        <meta property="og:description" content="Learn essential stock market terms with simple explanations. Master financial concepts for better investment decisions." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://nayibulls.com/glossary" />
         <meta property="og:site_name" content="NayiBulls" />
         
-        {/* Twitter meta tags */}
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Financial Glossary - Stock Market Terms Explained" />
-        <meta name="twitter:description" content="Learn essential stock market terms with simple explanations for retail investors." />
+        <meta name="twitter:title" content="Financial Glossary - Stock Market Terms" />
+        <meta name="twitter:description" content="Learn essential stock market terms with simple explanations for Indian investors." />
       </Helmet>
 
       <Header />
       
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-12">
           <BookOpen className="h-16 w-16 text-nayibulls-navy mx-auto mb-4" />
           <h1 className="text-4xl font-bold text-nayibulls-navy mb-4">Financial Glossary</h1>
@@ -190,6 +189,109 @@ const Glossary = () => {
               <p className="text-blue-200">Help assess the potential risks of an investment</p>
             </div>
           </div>
+        </div>
+
+        {/* Tool Description Section */}
+        <div className="mt-16 space-y-8">
+          <Card className="bg-gradient-to-r from-nayibulls-navy-light to-nayibulls-green text-white">
+            <CardHeader>
+              <CardTitle className="text-2xl flex items-center text-white">
+                <Info className="h-6 w-6 mr-2" />
+                Master Financial Terms with Confidence
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4 text-blue-100">
+              <p className="text-lg">
+                The NayiBulls Financial Glossary breaks down complex stock market jargon into simple, understandable explanations. 
+                Every term is explained with real examples from the Indian market, helping you build confidence in your investment journey.
+              </p>
+              <div className="grid md:grid-cols-2 gap-6 mt-6">
+                <div>
+                  <h3 className="font-semibold text-white mb-2 flex items-center">
+                    <Target className="h-5 w-5 mr-2" />
+                    What You'll Learn
+                  </h3>
+                  <ul className="space-y-2 text-sm">
+                    <li>• <strong>Valuation Ratios:</strong> PE, PB, Price-to-Sales and what they mean</li>
+                    <li>• <strong>Profitability Metrics:</strong> ROCE, ROE, Operating Margin</li>
+                    <li>• <strong>Market Terms:</strong> Bull/Bear markets, volatility, market cap</li>
+                    <li>• <strong>Dividend Concepts:</strong> Yield, payout ratio, ex-dividend dates</li>
+                    <li>• <strong>Growth Indicators:</strong> EPS growth, revenue growth, CAGR</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-white mb-2 flex items-center">
+                    <Lightbulb className="h-5 w-5 mr-2" />
+                    Why This Matters
+                  </h3>
+                  <ul className="space-y-2 text-sm">
+                    <li>• <strong>Informed Decisions:</strong> Understand what you're investing in</li>
+                    <li>• <strong>Avoid Mistakes:</strong> Don't fall for misleading advice</li>
+                    <li>• <strong>Build Confidence:</strong> Speak the language of investing</li>
+                    <li>• <strong>Better Analysis:</strong> Evaluate stocks like a pro</li>
+                    <li>• <strong>Save Time:</strong> Quick reference when researching stocks</li>
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-nayibulls-green border-l-4">
+            <CardHeader>
+              <CardTitle className="text-nayibulls-navy">🎯 Most Important Terms for Beginners</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid md:grid-cols-3 gap-4 text-sm">
+                <div className="bg-green-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-nayibulls-green mb-2">Start Here</h4>
+                  <ul className="space-y-1">
+                    <li>• PE Ratio</li>
+                    <li>• Market Cap</li>
+                    <li>• Dividend Yield</li>
+                    <li>• EPS (Earnings Per Share)</li>
+                  </ul>
+                </div>
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-nayibulls-navy mb-2">Next Level</h4>
+                  <ul className="space-y-1">
+                    <li>• ROCE</li>
+                    <li>• Debt-to-Equity</li>
+                    <li>• Price-to-Book</li>
+                    <li>• Beta</li>
+                  </ul>
+                </div>
+                <div className="bg-purple-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-purple-700 mb-2">Advanced</h4>
+                  <ul className="space-y-1">
+                    <li>• Free Cash Flow</li>
+                    <li>• EBITDA</li>
+                    <li>• Operating Margin</li>
+                    <li>• Working Capital</li>
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-yellow-50 border-yellow-200">
+            <CardHeader>
+              <CardTitle className="text-nayibulls-navy">💡 Pro Tip: Learning Path</CardTitle>
+            </CardHeader>
+            <CardContent className="text-sm">
+              <p className="mb-3">
+                <strong>Recommended Learning Sequence:</strong>
+              </p>
+              <div className="space-y-2">
+                <p><strong>Week 1:</strong> Master PE Ratio, Market Cap, and EPS - these appear in every stock analysis</p>
+                <p><strong>Week 2:</strong> Learn Dividend Yield and ROCE - essential for income and quality assessment</p>
+                <p><strong>Week 3:</strong> Understand Debt-to-Equity and Price-to-Book - crucial for safety analysis</p>
+                <p><strong>Week 4:</strong> Explore sector-specific terms based on your investment interests</p>
+              </div>
+              <p className="mt-3 text-gray-600">
+                <strong>Practice Tip:</strong> After learning each term, find it in real company annual reports or financial websites like MoneyControl or Screener.in
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </div>
 

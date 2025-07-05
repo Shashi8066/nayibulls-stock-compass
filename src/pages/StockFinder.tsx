@@ -1,6 +1,6 @@
 
 import { useState, useMemo } from 'react';
-import { TrendingUp, Filter, Search, ArrowUp, ArrowDown, Zap } from 'lucide-react';
+import { TrendingUp, Filter, Search, ArrowUp, ArrowDown, Zap, Info, Target, BookOpen } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -366,6 +366,75 @@ const StockFinder = () => {
             </CardContent>
           </Card>
         )}
+
+        {/* Tool Description Section */}
+        <div className="mt-16 space-y-8">
+          <Card className="bg-gradient-to-r from-nayibulls-navy to-nayibulls-navy-light text-white">
+            <CardHeader>
+              <CardTitle className="text-2xl flex items-center text-white">
+                <Info className="h-6 w-6 mr-2" />
+                About the Stock Finder Tool
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4 text-blue-100">
+              <p className="text-lg">
+                The NayiBulls Stock Finder is designed specifically for Indian retail investors who want to discover 
+                emerging opportunities in small-cap and mid-cap segments. Unlike traditional stock screeners that focus 
+                on large-cap stocks, our tool helps you identify companies with high growth potential before they become mainstream.
+              </p>
+              <div className="grid md:grid-cols-2 gap-6 mt-6">
+                <div>
+                  <h3 className="font-semibold text-white mb-2 flex items-center">
+                    <Target className="h-5 w-5 mr-2" />
+                    How It Works
+                  </h3>
+                  <ul className="space-y-2 text-sm">
+                    <li>• Filter by market cap categories (Small-cap: ₹250-2,000 Cr, Mid-cap: ₹2,000-10,000 Cr)</li>
+                    <li>• Search by sectors popular among retail investors (Technology, Auto-Tech, Electronics)</li>
+                    <li>• Set minimum return thresholds to find top performers</li>
+                    <li>• View key metrics: PE ratio, revenue growth, profit growth</li>
+                    <li>• Discover stocks with special flags like "High EPS Growth" or "Recovery Play"</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-white mb-2 flex items-center">
+                    <BookOpen className="h-5 w-5 mr-2" />
+                    Why Use This Tool?
+                  </h3>
+                  <ul className="space-y-2 text-sm">
+                    <li>• <strong>Early Discovery:</strong> Find promising stocks before institutional investors</li>
+                    <li>• <strong>Indian Focus:</strong> Tailored for NSE/BSE listed companies with INR calculations</li>
+                    <li>• <strong>Growth Metrics:</strong> Focus on revenue and profit growth, not just market cap</li>
+                    <li>• <strong>Educational:</strong> Learn what makes a stock attractive through real examples</li>
+                    <li>• <strong>Time-Saving:</strong> Quick filtering instead of manual research</li>
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-nayibulls-green border-l-4">
+            <CardHeader>
+              <CardTitle className="text-nayibulls-navy">💡 Pro Tips for Indian Investors</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid md:grid-cols-3 gap-4 text-sm">
+                <div className="bg-green-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-nayibulls-green mb-2">Small-Cap Strategy</h4>
+                  <p>Look for companies with consistent revenue growth above 20% and manageable debt levels. Small-caps can give 3-5x returns but require patience.</p>
+                </div>
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-nayibulls-navy mb-2">Mid-Cap Balance</h4>
+                  <p>Mid-caps offer better stability than small-caps while maintaining growth potential. Target PE ratios between 15-35 for reasonable valuations.</p>
+                </div>
+                <div className="bg-purple-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-purple-700 mb-2">Sector Rotation</h4>
+                  <p>Technology and auto-tech sectors have shown strong growth in recent years. Electronics manufacturing benefits from PLI schemes.</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
 
         {/* Disclaimer */}
         <Card className="mt-12 bg-yellow-50 border-yellow-200">
