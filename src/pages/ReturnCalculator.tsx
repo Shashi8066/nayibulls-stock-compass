@@ -1,6 +1,6 @@
 
 import { useState, useMemo } from 'react';
-import { Calculator, TrendingUp, Zap, Info } from 'lucide-react';
+import { Calculator, TrendingUp, Zap, Info, Lightbulb, Target } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -83,350 +83,345 @@ const ReturnCalculator = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-nayibulls-gray">
       <Helmet>
-        <title>SIP Return Calculator - Investment Growth Estimator | NayiBulls</title>
-        <meta name="description" content="Calculate potential returns from your investments with our SIP-style return estimator. Visualize compound growth over time and make informed investment decisions." />
-        <meta name="keywords" content="SIP calculator, return calculator, investment calculator, compound interest calculator, SIP returns, investment growth, financial calculator" />
+        <title>Stock Return Calculator - Estimate Investment Returns | NayiBulls</title>
+        <meta name="description" content="Use our free stock return calculator to estimate profits from Indian equity investments over time. Compare lump sum vs SIP returns with interactive charts and compound growth visualization." />
+        <meta name="keywords" content="stock return calculator India, investment calculator, SIP calculator, compound interest calculator, lump sum vs SIP, equity returns India" />
         <meta name="author" content="NayiBulls" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://nayibulls.com/return-calculator" />
         
         {/* Open Graph meta tags */}
-        <meta property="og:title" content="SIP Return Calculator - Investment Growth Estimator" />
-        <meta property="og:description" content="Calculate potential returns from your investments with our SIP-style return estimator. Visualize compound growth over time." />
+        <meta property="og:title" content="Stock Return Calculator - Estimate Investment Returns" />
+        <meta property="og:description" content="Calculate potential returns from Indian equity investments with our free calculator. Compare lump sum vs SIP strategies." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://nayibulls.com/return-calculator" />
         <meta property="og:site_name" content="NayiBulls" />
         
         {/* Twitter meta tags */}
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="SIP Return Calculator - Investment Growth Estimator" />
-        <meta name="twitter:description" content="Calculate potential returns from your investments with our SIP-style return estimator." />
+        <meta name="twitter:title" content="Stock Return Calculator - Estimate Investment Returns" />
+        <meta name="twitter:description" content="Calculate potential returns from Indian equity investments with interactive charts." />
       </Helmet>
 
       <Header />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Page Header */}
         <div className="text-center mb-12">
-          <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-nayibulls-green to-nayibulls-green-light rounded-full flex items-center justify-center">
-            <Calculator className="h-8 w-8 text-white" />
-          </div>
-          <h1 className="text-4xl font-bold text-nayibulls-navy mb-4">Return Estimator</h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Calculate potential returns from your investments with our SIP-style return estimator. 
-            Visualize the power of compound growth over time and make informed investment decisions.
+          <Calculator className="h-16 w-16 text-nayibulls-navy mx-auto mb-4" />
+          <h1 className="text-4xl font-bold text-nayibulls-navy mb-4">Stock Return Calculator</h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Estimate how much your investment will grow over time with compound interest calculations.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Calculator Inputs */}
-          <div className="lg:col-span-1">
-            <Card className="sticky top-8">
+        {/* Educational Content */}
+        <div className="grid lg:grid-cols-3 gap-8 mb-12">
+          <div className="lg:col-span-2">
+            <Card className="mb-8">
               <CardHeader>
                 <CardTitle className="flex items-center text-nayibulls-navy">
-                  <Zap className="h-5 w-5 mr-2" />
-                  Investment Calculator
+                  <Info className="h-5 w-5 mr-2" />
+                  How This Calculator Works
                 </CardTitle>
-                <CardDescription>
-                  Adjust your investment parameters to see potential returns
-                </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-6">
-                {/* Investment Type */}
-                <div className="space-y-3">
-                  <Label className="text-sm font-medium">Investment Type</Label>
-                  <div className="flex space-x-2">
-                    <Button
-                      variant={investmentType === 'lumpsum' ? 'default' : 'outline'}
-                      onClick={() => setInvestmentType('lumpsum')}
-                      className="flex-1"
-                    >
-                      Lump Sum
-                    </Button>
-                    <Button
-                      variant={investmentType === 'sip' ? 'default' : 'outline'}
-                      onClick={() => setInvestmentType('sip')}
-                      className="flex-1"
-                    >
-                      SIP
-                    </Button>
+              <CardContent className="space-y-4">
+                <p className="text-gray-700 leading-relaxed">
+                  Our return calculator helps Indian investors understand the power of compound growth in equity investments. 
+                  Unlike fixed deposits, stock market investments can provide significantly higher returns over the long term, 
+                  though they come with higher risk.
+                </p>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold text-nayibulls-navy mb-2">Lump Sum Investment</h4>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      <li>• Invest a large amount once</li>
+                      <li>• Benefit from longer compounding period</li>
+                      <li>• Good when you have surplus funds</li>
+                      <li>• Market timing risk involved</li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold text-nayibulls-navy mb-2">SIP (Systematic Investment Plan)</h4>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      <li>• Invest fixed amount monthly</li>
+                      <li>• Rupee cost averaging benefit</li>
+                      <li>• Suitable for regular income earners</li>
+                      <li>• Reduces market timing risk</li>
+                    </ul>
                   </div>
                 </div>
+              </CardContent>
+            </Card>
 
-                {/* Investment Amount */}
-                {investmentType === 'lumpsum' ? (
-                  <div className="space-y-3">
-                    <Label htmlFor="investment">Investment Amount (₹)</Label>
-                    <Input
-                      id="investment"
-                      type="number"
-                      value={investment}
-                      onChange={(e) => setInvestment(Number(e.target.value))}
-                      min="1000"
-                      max="10000000"
-                      step="1000"
-                    />
-                    <Slider
-                      value={[investment]}
-                      onValueChange={(value) => setInvestment(value[0])}
-                      max={1000000}
-                      min={1000}
-                      step={1000}
-                      className="w-full"
-                    />
-                    <p className="text-xs text-gray-500">Range: ₹1,000 - ₹10,00,000</p>
+            <Card className="mb-8">
+              <CardHeader>
+                <CardTitle className="flex items-center text-nayibulls-navy">
+                  <Target className="h-5 w-5 mr-2" />
+                  Example Scenarios for Indian Investors
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-nayibulls-navy mb-2">Young Professional (Age 25)</h4>
+                    <p className="text-sm text-gray-700">
+                      <strong>SIP ₹10,000/month for 30 years at 12% return:</strong><br/>
+                      Total Investment: ₹36 lakhs | Final Value: ₹3.5 crores<br/>
+                      <em>Start early to leverage the power of compounding!</em>
+                    </p>
                   </div>
-                ) : (
-                  <div className="space-y-3">
-                    <Label htmlFor="monthly">Monthly SIP Amount (₹)</Label>
-                    <Input
-                      id="monthly"
-                      type="number"
-                      value={monthlyAmount}
-                      onChange={(e) => setMonthlyAmount(Number(e.target.value))}
-                      min="500"
-                      max="100000"
-                      step="500"
-                    />
-                    <Slider
-                      value={[monthlyAmount]}
-                      onValueChange={(value) => setMonthlyAmount(value[0])}
-                      max={50000}
-                      min={500}
-                      step={500}
-                      className="w-full"
-                    />
-                    <p className="text-xs text-gray-500">Range: ₹500 - ₹50,000</p>
-                  </div>
-                )}
-
-                {/* Expected Return */}
-                <div className="space-y-3">
-                  <Label htmlFor="return">Expected Annual Return (%)</Label>
-                  <Input
-                    id="return"
-                    type="number"
-                    value={annualReturn}
-                    onChange={(e) => setAnnualReturn(Number(e.target.value))}
-                    min="1"
-                    max="30"
-                    step="0.5"
-                  />
-                  <Slider
-                    value={[annualReturn]}
-                    onValueChange={(value) => setAnnualReturn(value[0])}
-                    max={30}
-                    min={1}
-                    step={0.5}
-                    className="w-full"
-                  />
-                  <p className="text-xs text-gray-500">Range: 1% - 30%</p>
-                </div>
-
-                {/* Duration */}
-                <div className="space-y-3">
-                  <Label htmlFor="duration">Investment Duration (Years)</Label>
-                  <Input
-                    id="duration"
-                    type="number"
-                    value={duration}
-                    onChange={(e) => setDuration(Number(e.target.value))}
-                    min="1"
-                    max="30"
-                    step="1"
-                  />
-                  <Slider
-                    value={[duration]}
-                    onValueChange={(value) => setDuration(value[0])}
-                    max={30}
-                    min={1}
-                    step={1}
-                    className="w-full"
-                  />
-                  <p className="text-xs text-gray-500">Range: 1 - 30 years</p>
-                </div>
-
-                {/* Quick Presets */}
-                <div className="space-y-3">
-                  <Label className="text-sm font-medium">Quick Presets</Label>
-                  <div className="grid grid-cols-2 gap-2">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => {
-                        setInvestment(50000);
-                        setAnnualReturn(12);
-                        setDuration(10);
-                        setInvestmentType('lumpsum');
-                      }}
-                    >
-                      Conservative
-                    </Button>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => {
-                        setInvestment(100000);
-                        setAnnualReturn(15);
-                        setDuration(10);
-                        setInvestmentType('lumpsum');
-                      }}
-                    >
-                      Moderate
-                    </Button>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => {
-                        setMonthlyAmount(10000);
-                        setAnnualReturn(18);
-                        setDuration(15);
-                        setInvestmentType('sip');
-                      }}
-                    >
-                      Aggressive SIP
-                    </Button>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => {
-                        setInvestment(500000);
-                        setAnnualReturn(20);
-                        setDuration(5);
-                        setInvestmentType('lumpsum');
-                      }}
-                    >
-                      High Growth
-                    </Button>
+                  
+                  <div className="bg-green-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-nayibulls-navy mb-2">Mid-Career (Age 35)</h4>
+                    <p className="text-sm text-gray-700">
+                      <strong>Lump sum ₹5 lakhs + SIP ₹15,000/month for 20 years at 12%:</strong><br/>
+                      Total: ₹41 lakhs invested | Final Value: ₹1.8 crores<br/>
+                      <em>Combination strategy works well for mid-career professionals.</em>
+                    </p>
                   </div>
                 </div>
               </CardContent>
             </Card>
           </div>
 
-          {/* Results and Charts */}
-          <div className="lg:col-span-2 space-y-8">
-            {/* Results Summary */}
-            <Card>
+          <div>
+            <Card className="bg-yellow-50 border-yellow-200">
               <CardHeader>
                 <CardTitle className="flex items-center text-nayibulls-navy">
-                  <TrendingUp className="h-5 w-5 mr-2" />
-                  Investment Summary
+                  <Lightbulb className="h-5 w-5 mr-2" />
+                  Did You Know?
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className="text-center p-4 bg-gray-50 rounded-lg">
-                    <p className="text-sm text-gray-600">Total Invested</p>
-                    <p className="text-xl font-bold text-nayibulls-navy">
-                      ₹{totalInvested.toLocaleString()}
-                    </p>
-                  </div>
-                  <div className="text-center p-4 bg-green-50 rounded-lg">
-                    <p className="text-sm text-gray-600">Total Returns</p>
-                    <p className="text-xl font-bold text-nayibulls-green">
-                      ₹{totalReturns.toLocaleString()}
-                    </p>
-                  </div>
-                  <div className="text-center p-4 bg-blue-50 rounded-lg">
-                    <p className="text-sm text-gray-600">Final Value</p>
-                    <p className="text-xl font-bold text-nayibulls-navy">
-                      ₹{finalValues.compoundInterest.toLocaleString()}
-                    </p>
-                  </div>
-                  <div className="text-center p-4 bg-yellow-50 rounded-lg">
-                    <p className="text-sm text-gray-600">Return %</p>
-                    <p className="text-xl font-bold text-yellow-600">
-                      {returnPercentage}%
-                    </p>
+              <CardContent className="space-y-3">
+                <div className="text-sm text-gray-700">
+                  <p className="mb-2"><strong>The Rule of 72:</strong></p>
+                  <p className="mb-3">Divide 72 by your expected return rate to know how many years it takes to double your money.</p>
+                  
+                  <div className="bg-white p-3 rounded">
+                    <p className="font-medium">At 12% return:</p>
+                    <p>72 ÷ 12 = 6 years to double</p>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
-
-            {/* Growth Chart */}
-            <Card>
-              <CardHeader>
-                <CardTitle>Growth Projection</CardTitle>
-                <CardDescription>
-                  Comparison between simple interest and compound growth over time
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="h-80">
-                  <ResponsiveContainer width="100%" height="100%">
-                    <LineChart data={calculateReturns}>
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="year" />
-                      <YAxis tickFormatter={(value) => `₹${(value / 1000).toFixed(0)}K`} />
-                      <Tooltip 
-                        formatter={(value: number) => [`₹${value.toLocaleString()}`, '']}
-                        labelFormatter={(year) => `Year ${year}`}
-                      />
-                      <Legend />
-                      <Line 
-                        type="monotone" 
-                        dataKey="simpleInterest" 
-                        stroke="#64748b" 
-                        strokeWidth={2}
-                        name="Simple Interest"
-                        strokeDasharray="5 5"
-                      />
-                      <Line 
-                        type="monotone" 
-                        dataKey="compoundInterest" 
-                        stroke="#10b981" 
-                        strokeWidth={3}
-                        name="Compound Growth"
-                      />
-                    </LineChart>
-                  </ResponsiveContainer>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Investment vs Returns */}
-            <Card>
-              <CardHeader>
-                <CardTitle>Investment Breakdown</CardTitle>
-                <CardDescription>
-                  Visual breakdown of your invested amount vs generated returns
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="h-64">
-                  <ResponsiveContainer width="100%" height="100%">
-                    <BarChart data={comparisonData}>
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="name" />
-                      <YAxis tickFormatter={(value) => `₹${(value / 1000).toFixed(0)}K`} />
-                      <Tooltip formatter={(value: number) => `₹${value.toLocaleString()}`} />
-                      <Bar dataKey="value" radius={[4, 4, 0, 0]} />
-                    </BarChart>
-                  </ResponsiveContainer>
+                
+                <div className="text-sm text-gray-700 mt-4">
+                  <p className="mb-2"><strong>Nifty 50 Historical Returns:</strong></p>
+                  <ul className="space-y-1">
+                    <li>• Last 20 years: ~11-12% CAGR</li>
+                    <li>• Last 10 years: ~13-14% CAGR</li>
+                    <li>• Include dividend for total returns</li>
+                  </ul>
                 </div>
               </CardContent>
             </Card>
           </div>
         </div>
 
-        {/* Information Card */}
-        <Card className="mt-12 bg-blue-50 border-blue-200">
-          <CardContent className="pt-6">
-            <div className="flex items-start space-x-3">
-              <Info className="h-5 w-5 text-blue-600 mt-0.5" />
-              <div>
-                <h3 className="font-semibold text-blue-900 mb-2">How to Use This Calculator</h3>
-                <div className="text-sm text-blue-800 space-y-1">
-                  <p>• <strong>Lump Sum:</strong> One-time investment with compound growth</p>
-                  <p>• <strong>SIP:</strong> Monthly investments with compounding on each contribution</p>
-                  <p>• <strong>Expected Return:</strong> Conservative: 8-12%, Moderate: 12-15%, Aggressive: 15%+</p>
-                  <p>• <strong>Disclaimer:</strong> These are estimates based on assumed returns. Actual market performance may vary.</p>
+        <div className="grid lg:grid-cols-2 gap-8">
+          {/* Calculator Inputs */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Investment Calculator</CardTitle>
+              <CardDescription>
+                Adjust the parameters below to see how your investment could grow
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="flex gap-4">
+                <Button
+                  variant={investmentType === 'lumpsum' ? 'default' : 'outline'}
+                  onClick={() => setInvestmentType('lumpsum')}
+                  className={investmentType === 'lumpsum' ? 'bg-nayibulls-navy' : ''}
+                >
+                  Lump Sum
+                </Button>
+                <Button
+                  variant={investmentType === 'sip' ? 'default' : 'outline'}
+                  onClick={() => setInvestmentType('sip')}
+                  className={investmentType === 'sip' ? 'bg-nayibulls-navy' : ''}
+                >
+                  SIP
+                </Button>
+              </div>
+
+              {investmentType === 'lumpsum' ? (
+                <div className="space-y-2">
+                  <Label htmlFor="investment">Initial Investment (₹)</Label>
+                  <Input
+                    id="investment"
+                    type="number"
+                    value={investment}
+                    onChange={(e) => setInvestment(Number(e.target.value))}
+                    min="1000"
+                    step="1000"
+                  />
                 </div>
+              ) : (
+                <div className="space-y-2">
+                  <Label htmlFor="monthly">Monthly Investment (₹)</Label>
+                  <Input
+                    id="monthly"
+                    type="number"
+                    value={monthlyAmount}
+                    onChange={(e) => setMonthlyAmount(Number(e.target.value))}
+                    min="500"
+                    step="500"
+                  />
+                </div>
+              )}
+
+              <div className="space-y-2">
+                <Label>Expected Annual Return: {annualReturn}%</Label>
+                <Slider
+                  value={[annualReturn]}
+                  onValueChange={(value) => setAnnualReturn(value[0])}
+                  max={25}
+                  min={5}
+                  step={0.5}
+                  className="w-full"
+                />
+                <div className="flex justify-between text-xs text-gray-500">
+                  <span>Conservative (5%)</span>
+                  <span>Aggressive (25%)</span>
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <Label>Investment Duration: {duration} years</Label>
+                <Slider
+                  value={[duration]}
+                  onValueChange={(value) => setDuration(value[0])}
+                  max={30}
+                  min={1}
+                  step={1}
+                  className="w-full"
+                />
+              </div>
+
+              <div className="bg-nayibulls-gray p-4 rounded-lg">
+                <h4 className="font-semibold text-nayibulls-navy mb-3">Investment Summary</h4>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span>Total Invested:</span>
+                    <span className="font-semibold">₹{totalInvested.toLocaleString()}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Expected Returns:</span>
+                    <span className="font-semibold text-nayibulls-green">₹{totalReturns.toLocaleString()}</span>
+                  </div>
+                  <div className="flex justify-between border-t pt-2">
+                    <span>Final Amount:</span>
+                    <span className="font-bold text-nayibulls-navy">₹{finalValues.compoundInterest.toLocaleString()}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Total Return %:</span>
+                    <span className="font-bold text-nayibulls-green">{returnPercentage}%</span>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Results Chart */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Growth Visualization</CardTitle>
+              <CardDescription>
+                See how your investment grows over time with compound interest
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="h-80 mb-6">
+                <ResponsiveContainer width="100%" height="100%">
+                  <LineChart data={calculateReturns}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="year" />
+                    <YAxis tickFormatter={(value) => `₹${(value/1000).toFixed(0)}K`} />
+                    <Tooltip 
+                      formatter={(value: number) => [`₹${value.toLocaleString()}`, '']}
+                      labelFormatter={(label) => `Year ${label}`}
+                    />
+                    <Legend />
+                    <Line 
+                      type="monotone" 
+                      dataKey="compoundInterest" 
+                      stroke="#059669" 
+                      strokeWidth={3}
+                      name="Compound Growth"
+                    />
+                    <Line 
+                      type="monotone" 
+                      dataKey="invested" 
+                      stroke="#64748b" 
+                      strokeWidth={2}
+                      strokeDasharray="5 5"
+                      name="Amount Invested"
+                    />
+                  </LineChart>
+                </ResponsiveContainer>
+              </div>
+
+              <div className="h-40">
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart data={comparisonData}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="name" />
+                    <YAxis tickFormatter={(value) => `₹${(value/1000).toFixed(0)}K`} />
+                    <Tooltip formatter={(value: number) => `₹${value.toLocaleString()}`} />
+                    <Bar dataKey="value" />
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Why This Matters Section */}
+        <Card className="mt-12">
+          <CardHeader>
+            <CardTitle className="flex items-center text-nayibulls-navy">
+              <Zap className="h-5 w-5 mr-2" />
+              Why This Calculator Matters for Indian Investors
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div>
+                <h4 className="font-semibold text-nayibulls-navy mb-2">Beat Inflation</h4>
+                <p className="text-sm text-gray-700">
+                  With inflation at 4-6% in India, your money needs to grow faster to maintain purchasing power. 
+                  Equity investments historically provide inflation-beating returns.
+                </p>
+              </div>
+              
+              <div>
+                <h4 className="font-semibold text-nayibulls-navy mb-2">Plan Better</h4>
+                <p className="text-sm text-gray-700">
+                  Whether saving for a house, child's education, or retirement, this calculator helps you 
+                  set realistic goals and investment amounts.
+                </p>
+              </div>
+              
+              <div>
+                <h4 className="font-semibold text-nayibulls-navy mb-2">Compare Options</h4>
+                <p className="text-sm text-gray-700">
+                  See the difference between FD returns (6-7%) and potential equity returns (10-15%) 
+                  over your investment horizon.
+                </p>
               </div>
             </div>
           </CardContent>
         </Card>
+
+        <div className="mt-8 bg-yellow-50 border-l-4 border-yellow-400 p-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">Important Disclaimer</h3>
+          <p className="text-gray-700">
+            This calculator provides estimates based on assumed constant returns. Actual stock market returns vary 
+            significantly and past performance doesn't guarantee future results. Please consult a financial advisor 
+            for personalized investment advice.
+          </p>
+        </div>
       </div>
 
       <Footer />

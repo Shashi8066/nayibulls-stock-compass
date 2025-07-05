@@ -1,24 +1,13 @@
-User-agent: Googlebot
-Disallow: /music/
-Disallow: /category/
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Disallow: /music/
-Disallow: /category/
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
 
 User-agent: *
-Disallow: /music/
-Disallow: /category/
 Allow: /
 
-
-# Sitemaps
+# Sitemap
 Sitemap: https://nayibulls.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin or private areas (if any in future)
+# Disallow: /admin/
+# Disallow: /private/
