@@ -373,6 +373,7 @@ const StockComparison = () => {
             </CardContent>
           </Card>
 
+          {/* How to Read the Comparison */}
           <Card className="border-nayibulls-navy border-l-4">
             <CardHeader>
               <CardTitle className="text-nayibulls-navy">📊 How to Read the Comparison</CardTitle>
@@ -399,6 +400,7 @@ const StockComparison = () => {
             </CardContent>
           </Card>
 
+          {/* Example Comparison */}
           <Card className="bg-blue-50 border-blue-200">
             <CardHeader>
               <CardTitle className="text-nayibulls-navy">💡 Example: IT Sector Comparison</CardTitle>
@@ -420,6 +422,39 @@ const StockComparison = () => {
               <p className="mt-3 text-gray-600">
                 <strong>Decision Framework:</strong> TCS for stability and long-term wealth creation, Infosys for better dividends and potential upside.
               </p>
+            </CardContent>
+          </Card>
+
+          {/* What Makes This Tool Unique */}
+          <Card className="bg-gradient-to-r from-blue-50 to-green-50 border-l-4 border-nayibulls-green">
+            <CardHeader>
+              <CardTitle className="text-nayibulls-navy">🎯 What Makes Our Stock Comparison Tool Unique</CardTitle>
+            </CardHeader>
+            <CardContent className="text-sm space-y-4">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="font-semibold text-nayibulls-navy mb-2">🇮🇳 Built for Indian Market</h4>
+                  <p>Focuses on Indian companies with metrics that matter most to local retail investors. No complex international ratios that confuse beginners.</p>
+                  
+                  <h4 className="font-semibold text-nayibulls-navy mb-2 mt-4">📊 Easy Visual Comparison</h4>
+                  <p>Side-by-side layout makes it instant to spot which stock has better PE ratio, higher ROCE, or stronger growth rates.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-nayibulls-navy mb-2">💡 Educational Approach</h4>
+                  <p>Not just numbers - we explain what each metric means and why it matters for your investment decision.</p>
+                  
+                  <h4 className="font-semibold text-nayibulls-navy mb-2 mt-4">🎯 Decision Support</h4>
+                  <p>Trend arrows show you at a glance which stock is performing better in each category, making decisions clearer.</p>
+                </div>
+              </div>
+              
+              <div className="bg-white p-4 rounded-lg border-l-4 border-nayibulls-green mt-6">
+                <h5 className="font-semibold text-nayibulls-navy mb-2">💰 Pro Tip for Smart Investing</h5>
+                <p className="text-gray-700">
+                  Don't just compare any two stocks - compare companies in the same sector (like TCS vs Infosys, or HDFC Bank vs ICICI Bank). 
+                  This gives you a true apples-to-apples comparison and helps you pick the sector leader.
+                </p>
+              </div>
             </CardContent>
           </Card>
         </div>
