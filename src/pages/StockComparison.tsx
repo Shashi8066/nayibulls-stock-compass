@@ -129,7 +129,6 @@ const StockComparison = () => {
       <Header />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Page Header */}
         <div className="text-center mb-12">
           <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-nayibulls-green to-nayibulls-navy rounded-full flex items-center justify-center">
             <BarChart3 className="h-8 w-8 text-white" />
@@ -140,7 +139,6 @@ const StockComparison = () => {
           </p>
         </div>
 
-        {/* Search Stocks */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <StockSearchCard
             title="Select Stock 1"
@@ -158,7 +156,6 @@ const StockComparison = () => {
           />
         </div>
 
-        {/* Comparison Results */}
         {stock1 && stock2 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <StockComparisonCard stock={stock1} borderColor="border-nayibulls-navy" />
@@ -181,7 +178,6 @@ const StockComparison = () => {
           </div>
         )}
 
-        {/* Tool Description Section */}
         <StockComparisonDescription />
       </div>
 
