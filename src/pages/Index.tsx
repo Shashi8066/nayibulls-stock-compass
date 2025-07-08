@@ -136,11 +136,6 @@ const Index = () => {
                 the stock market better. Whether you're a beginner taking your first steps into investing or 
                 an experienced investor looking for better analysis tools, we've got you covered.
               </p>
-              <p className="text-lg leading-relaxed mt-4">
-                Our free tools help you estimate returns, discover emerging stocks, compare companies, and 
-                learn essential financial concepts - all designed specifically for the Indian market with 
-                INR calculations and NSE/BSE focus.
-              </p>
             </div>
           </div>
 
